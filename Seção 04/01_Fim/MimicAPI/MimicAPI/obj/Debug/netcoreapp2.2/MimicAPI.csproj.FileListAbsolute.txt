@@ -1,0 +1,14 @@
+C:\Users\leonardoh\Documents\Estudos\Projetos C#\CURSO WebAPI Rest\Seção 04\01_Fim\MimicAPI\MimicAPI\bin\Debug\netcoreapp2.2\MimicAPI.deps.json
+C:\Users\leonardoh\Documents\Estudos\Projetos C#\CURSO WebAPI Rest\Seção 04\01_Fim\MimicAPI\MimicAPI\bin\Debug\netcoreapp2.2\MimicAPI.runtimeconfig.json
+C:\Users\leonardoh\Documents\Estudos\Projetos C#\CURSO WebAPI Rest\Seção 04\01_Fim\MimicAPI\MimicAPI\bin\Debug\netcoreapp2.2\MimicAPI.runtimeconfig.dev.json
+C:\Users\leonardoh\Documents\Estudos\Projetos C#\CURSO WebAPI Rest\Seção 04\01_Fim\MimicAPI\MimicAPI\bin\Debug\netcoreapp2.2\MimicAPI.dll
+C:\Users\leonardoh\Documents\Estudos\Projetos C#\CURSO WebAPI Rest\Seção 04\01_Fim\MimicAPI\MimicAPI\obj\Debug\netcoreapp2.2\MimicAPI.csprojAssemblyReference.cache
+C:\Users\leonardoh\Documents\Estudos\Projetos C#\CURSO WebAPI Rest\Seção 04\01_Fim\MimicAPI\MimicAPI\obj\Debug\netcoreapp2.2\MimicAPI.csproj.CoreCompileInputs.cache
+C:\Users\leonardoh\Documents\Estudos\Projetos C#\CURSO WebAPI Rest\Seção 04\01_Fim\MimicAPI\MimicAPI\obj\Debug\netcoreapp2.2\MimicAPI.RazorAssemblyInfo.cache
+C:\Users\leonardoh\Documents\Estudos\Projetos C#\CURSO WebAPI Rest\Seção 04\01_Fim\MimicAPI\MimicAPI\obj\Debug\netcoreapp2.2\MimicAPI.RazorAssemblyInfo.cs
+C:\Users\leonardoh\Documents\Estudos\Projetos C#\CURSO WebAPI Rest\Seção 04\01_Fim\MimicAPI\MimicAPI\obj\Debug\netcoreapp2.2\MimicAPI.AssemblyInfoInputs.cache
+C:\Users\leonardoh\Documents\Estudos\Projetos C#\CURSO WebAPI Rest\Seção 04\01_Fim\MimicAPI\MimicAPI\obj\Debug\netcoreapp2.2\MimicAPI.AssemblyInfo.cs
+C:\Users\leonardoh\Documents\Estudos\Projetos C#\CURSO WebAPI Rest\Seção 04\01_Fim\MimicAPI\MimicAPI\obj\Debug\netcoreapp2.2\MimicAPI.RazorTargetAssemblyInfo.cache
+C:\Users\leonardoh\Documents\Estudos\Projetos C#\CURSO WebAPI Rest\Seção 04\01_Fim\MimicAPI\MimicAPI\bin\Debug\netcoreapp2.2\MimicAPI.pdb
+C:\Users\leonardoh\Documents\Estudos\Projetos C#\CURSO WebAPI Rest\Seção 04\01_Fim\MimicAPI\MimicAPI\obj\Debug\netcoreapp2.2\MimicAPI.dll
+C:\Users\leonardoh\Documents\Estudos\Projetos C#\CURSO WebAPI Rest\Seção 04\01_Fim\MimicAPI\MimicAPI\obj\Debug\netcoreapp2.2\MimicAPI.pdb

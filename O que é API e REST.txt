@@ -1,0 +1,41 @@
+﻿O que é uma API (Application Programming Interface)
+
+ - É um conjunto de rotinas e padrões estabelecidas por um software para 
+ a utilização das suas funcionalidades por aplicativos que não pretendem 
+ envolver-se em detalhes da implementação do software, mas apenas usar 
+ seus serviços.
+ 
+ Uma API são códigos de uma ou várias funcionalidades que podem ser utilizadas
+ em diferentes plataformas, códigos e programas.
+ 
+O que é REST (Representational State Transfer)
+
+ - É um estilo de arquitetura de software que define um conjunto de restrições
+ a serem utilizados para a criação de web services (Serviços Web).
+
+ Permite a criação de softwares interoperáveis, ou seja, permite a conversação
+ entre sistemas, troca de informações, e o Rest estabelece o padrão entre essa
+ comunicação.
+ 
+Principios:
+ 
+  - Client-Server: Um sistema solicita, e o outro responde (Protocolo HTTP);
+  - Stateless: Não guarda estado, informação de requisições anteriores (Nada de Cookies);
+  - Foco em Recursos: API REST é construída com foco nas entidades, foco nos dados, informações
+ principais, todo o trabalho é focado nos recursos;
+  - Operações: Operaçõs bem definidas por meio dos métodos, devida a grande utilização de 
+ operações HTTP(GET, POST, PUT, DELETE...);
+  - URI: Sintaxe universal para identificar recursos, endereço do site, por onde é realizada a navegação,
+ solicitações.
+  - Hipermedia: Permite navegar entre os recursos e saber como consumir, ou seja, permite a utilização de 
+ Hyperlinks, e assim informar os recursos utilizados pela API.
+
+Como é a construção de uma API REST (Foco em recurso, Operações(Métodos) e URI):
+
+Ex: Clientes (E-commerce) (Este é o recurso)
+ - GET "dominio"/clientes - obtém a lista de clientes
+ - GET /clientes/{id} - obtém apenas 1 de cliente
+ - POST /clientes - cria um novo cliente, os dados são enviados no corpo da requisição
+ - PUT /clientes/{id} - atualiza/substitui um cliente
+ - PATCH /clientes/{id} - atualiza um cliente, focado em uma atualização parcial
+ - DELETE /clientes/{id} - exclui um cliente
