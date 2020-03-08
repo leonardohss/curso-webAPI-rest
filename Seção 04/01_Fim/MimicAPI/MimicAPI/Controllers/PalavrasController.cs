@@ -1,6 +1,7 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using MimicAPI.Database;
 using MimicAPI.Models;
+using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -31,7 +32,14 @@ namespace MimicAPI.Controllers
         [HttpGet]
         public ActionResult Obter(int id)
         {
-            return Ok(_banco.Palavras.Find(id));
+            var obj = _banco.Palavras.Find(id);
+
+            if (obj == null)
+            {
+                //return StatusCode(404);
+                return NotFound();
+            }
+            return Ok(obj);
         }
 
         // -- /api/palavras(POST: id, nome, ativo, ...)
@@ -41,7 +49,7 @@ namespace MimicAPI.Controllers
         {
             _banco.Palavras.Add(palavra);
 
-            return Ok();
+            return Created($"/api/palavras/{palavra.Id}", palavra);
         }
 
         // -- /api/palavras/1(PUT: id, nome, ativo, ...)
@@ -49,8 +57,17 @@ namespace MimicAPI.Controllers
         [HttpPut]
         public ActionResult Atualizar(int id, Palavra palavra)
         {
+            var obj = _banco.Palavras.AsNoTracking().FirstOrDefault(a => a.Id == id);
+
+            if (obj == null)
+            {
+                //return StatusCode(404);
+                return NotFound();
+            }
+
             palavra.Id = id;
             _banco.Palavras.Update(palavra);
+            _banco.SaveChanges();
 
             return Ok();
         }
@@ -60,9 +77,19 @@ namespace MimicAPI.Controllers
         [HttpDelete]
         public ActionResult Deletar(int id)
         {
-            _banco.Palavras.Remove(_banco.Palavras.Find(id));
+            var palavra = _banco.Palavras.Find(id);
 
-            return Ok();
+            if (palavra == null)
+            {
+                //return StatusCode(404);
+                return NotFound();
+            }
+
+            palavra.Ativo = false;
+            _banco.Palavras.Update(palavra);
+            _banco.SaveChanges();
+            
+            return NoContent();
         }
     }
 }
