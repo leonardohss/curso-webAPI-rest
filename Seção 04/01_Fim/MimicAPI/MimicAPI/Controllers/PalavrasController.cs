@@ -45,9 +45,10 @@ namespace MimicAPI.Controllers
         // -- /api/palavras(POST: id, nome, ativo, ...)
         [Route("")]
         [HttpPost]
-        public ActionResult Cadastrar(Palavra palavra)
+        public ActionResult Cadastrar([FromBody]Palavra palavra)
         {
             _banco.Palavras.Add(palavra);
+            _banco.SaveChanges();
 
             return Created($"/api/palavras/{palavra.Id}", palavra);
         }
@@ -55,7 +56,7 @@ namespace MimicAPI.Controllers
         // -- /api/palavras/1(PUT: id, nome, ativo, ...)
         [Route("{id}")]
         [HttpPut]
-        public ActionResult Atualizar(int id, Palavra palavra)
+        public ActionResult Atualizar(int id, [FromBody]Palavra palavra)
         {
             var obj = _banco.Palavras.AsNoTracking().FirstOrDefault(a => a.Id == id);
 
