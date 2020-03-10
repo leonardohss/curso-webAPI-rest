@@ -1,0 +1,14 @@
+C:\Users\Leonardo Sousa\Documents\Projetos\Projetos C#\Curso Web API\Seção 04\01_Fim\MimicAPI\MimicAPI\bin\Release\netcoreapp2.2\MimicAPI.deps.json
+C:\Users\Leonardo Sousa\Documents\Projetos\Projetos C#\Curso Web API\Seção 04\01_Fim\MimicAPI\MimicAPI\bin\Release\netcoreapp2.2\MimicAPI.runtimeconfig.json
+C:\Users\Leonardo Sousa\Documents\Projetos\Projetos C#\Curso Web API\Seção 04\01_Fim\MimicAPI\MimicAPI\bin\Release\netcoreapp2.2\MimicAPI.runtimeconfig.dev.json
+C:\Users\Leonardo Sousa\Documents\Projetos\Projetos C#\Curso Web API\Seção 04\01_Fim\MimicAPI\MimicAPI\bin\Release\netcoreapp2.2\MimicAPI.dll
+C:\Users\Leonardo Sousa\Documents\Projetos\Projetos C#\Curso Web API\Seção 04\01_Fim\MimicAPI\MimicAPI\bin\Release\netcoreapp2.2\MimicAPI.pdb
+C:\Users\Leonardo Sousa\Documents\Projetos\Projetos C#\Curso Web API\Seção 04\01_Fim\MimicAPI\MimicAPI\obj\Release\netcoreapp2.2\MimicAPI.csprojAssemblyReference.cache
+C:\Users\Leonardo Sousa\Documents\Projetos\Projetos C#\Curso Web API\Seção 04\01_Fim\MimicAPI\MimicAPI\obj\Release\netcoreapp2.2\MimicAPI.csproj.CoreCompileInputs.cache
+C:\Users\Leonardo Sousa\Documents\Projetos\Projetos C#\Curso Web API\Seção 04\01_Fim\MimicAPI\MimicAPI\obj\Release\netcoreapp2.2\MimicAPI.RazorAssemblyInfo.cache
+C:\Users\Leonardo Sousa\Documents\Projetos\Projetos C#\Curso Web API\Seção 04\01_Fim\MimicAPI\MimicAPI\obj\Release\netcoreapp2.2\MimicAPI.RazorAssemblyInfo.cs
+C:\Users\Leonardo Sousa\Documents\Projetos\Projetos C#\Curso Web API\Seção 04\01_Fim\MimicAPI\MimicAPI\obj\Release\netcoreapp2.2\MimicAPI.AssemblyInfoInputs.cache
+C:\Users\Leonardo Sousa\Documents\Projetos\Projetos C#\Curso Web API\Seção 04\01_Fim\MimicAPI\MimicAPI\obj\Release\netcoreapp2.2\MimicAPI.AssemblyInfo.cs
+C:\Users\Leonardo Sousa\Documents\Projetos\Projetos C#\Curso Web API\Seção 04\01_Fim\MimicAPI\MimicAPI\obj\Release\netcoreapp2.2\MimicAPI.RazorTargetAssemblyInfo.cache
+C:\Users\Leonardo Sousa\Documents\Projetos\Projetos C#\Curso Web API\Seção 04\01_Fim\MimicAPI\MimicAPI\obj\Release\netcoreapp2.2\MimicAPI.dll
+C:\Users\Leonardo Sousa\Documents\Projetos\Projetos C#\Curso Web API\Seção 04\01_Fim\MimicAPI\MimicAPI\obj\Release\netcoreapp2.2\MimicAPI.pdb

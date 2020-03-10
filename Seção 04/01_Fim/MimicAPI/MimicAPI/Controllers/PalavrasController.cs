@@ -19,12 +19,17 @@ namespace MimicAPI.Controllers
             _banco = banco;
         }
 
-        //retorna todas as palavras cadastradas -- /api/palavras
+        //retorna todas as palavras cadastradas -- /api/palavras?data=2019-01-01
         [Route("")]
         [HttpGet]
-        public ActionResult ObterTodas()
+        public ActionResult ObterTodas(DateTime? data)
         {
-            return Ok(_banco.Palavras);         
+            var item = _banco.Palavras.AsQueryable();
+            if (data.HasValue)
+            {
+                item = item.Where(a => a.Criado > data.Value || a.Atualizado > data.Value);
+            }
+            return Ok(item);         
         }
 
         //retorna a palavra com o id informado -- /api/palavras/id
