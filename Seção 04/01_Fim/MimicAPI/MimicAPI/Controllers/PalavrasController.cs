@@ -6,6 +6,10 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using MimicAPI.Helpers;
+using Microsoft.Extensions.Primitives;
+using Newtonsoft.Json;
+using Newtonsoft;
 
 namespace MimicAPI.Controllers
 {
@@ -22,13 +26,37 @@ namespace MimicAPI.Controllers
         //retorna todas as palavras cadastradas -- /api/palavras?data=2019-01-01
         [Route("")]
         [HttpGet]
-        public ActionResult ObterTodas(DateTime? data)
+        public ActionResult ObterTodas(DateTime? data, int? pagNumero, int? qtdeRegistrosPag)
         {
             var item = _banco.Palavras.AsQueryable();
+
             if (data.HasValue)
-            {
+            { 
                 item = item.Where(a => a.Criado > data.Value || a.Atualizado > data.Value);
             }
+
+            //paginação
+            if (pagNumero.HasValue)
+            {
+                var totalRegistrosBd = item.Count();
+
+                item = item.Skip((pagNumero.Value - 1) * qtdeRegistrosPag.Value).Take(qtdeRegistrosPag.Value);
+
+                var paginacao = new Paginacao();
+
+                paginacao.NumeroPagina = pagNumero.Value;
+                paginacao.QtdeRegistrosPorPagina = qtdeRegistrosPag.Value;
+                paginacao.TotalRegistros = totalRegistrosBd;
+                paginacao.TotalPaginas = (int)Math.Ceiling((double)totalRegistrosBd / qtdeRegistrosPag.Value);
+
+                Response.Headers.Add("X-Pagination", JsonConvert.SerializeObject(paginacao));
+
+                if(pagNumero > paginacao.TotalPaginas)
+                {
+                    return NotFound();
+                }
+            }
+
             return Ok(item);         
         }
 
