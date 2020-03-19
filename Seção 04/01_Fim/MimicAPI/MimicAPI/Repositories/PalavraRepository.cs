@@ -17,7 +17,7 @@ namespace MimicAPI.Repositories
         public PalavraRepository(MimicContext banco)
         {
             _banco = banco;
-        }
+        } 
 
         public PaginationList<Palavra> ObterPalavras(PalavraUrlQuery query)
         {
