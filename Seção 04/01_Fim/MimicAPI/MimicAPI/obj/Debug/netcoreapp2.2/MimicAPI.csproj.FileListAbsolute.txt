@@ -26,3 +26,7 @@ C:\Users\Mauricy\Documents\Projetos C#\Curso API Rest\Seção 04\01_Fim\MimicAPI
 C:\Users\Mauricy\Documents\Projetos C#\Curso API Rest\Seção 04\01_Fim\MimicAPI\MimicAPI\obj\Debug\netcoreapp2.2\MimicAPI.RazorTargetAssemblyInfo.cache
 C:\Users\Mauricy\Documents\Projetos C#\Curso API Rest\Seção 04\01_Fim\MimicAPI\MimicAPI\obj\Debug\netcoreapp2.2\MimicAPI.dll
 C:\Users\Mauricy\Documents\Projetos C#\Curso API Rest\Seção 04\01_Fim\MimicAPI\MimicAPI\obj\Debug\netcoreapp2.2\MimicAPI.pdb
+C:\Users\Leonardo Sousa\Documents\Projetos\Projetos C#\Curso Web API\Seção 04\01_Fim\MimicAPI\MimicAPI\bin\Debug\netcoreapp2.2\appsettings.Development.json
+C:\Users\Leonardo Sousa\Documents\Projetos\Projetos C#\Curso Web API\Seção 04\01_Fim\MimicAPI\MimicAPI\bin\Debug\netcoreapp2.2\appsettings.json
+C:\Users\Leonardo Sousa\Documents\Projetos\Projetos C#\Curso Web API\Seção 04\01_Fim\MimicAPI\MimicAPI\bin\Debug\netcoreapp2.2\Properties\launchSettings.json
+C:\Users\Leonardo Sousa\Documents\Projetos\Projetos C#\Curso Web API\Seção 04\01_Fim\MimicAPI\MimicAPI\obj\Debug\netcoreapp2.2\MimicAPI.genruntimeconfig.cache

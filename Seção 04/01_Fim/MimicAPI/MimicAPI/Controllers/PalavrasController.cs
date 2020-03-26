@@ -28,20 +28,78 @@ namespace MimicAPI.Controllers
         }
 
         //retorna todas as palavras cadastradas -- /api/palavras?data=2019-01-01
-        [Route("")]
-        [HttpGet]
+        [HttpGet("", Name = "ObterTodas")]
         public ActionResult ObterTodas([FromQuery]PalavraUrlQuery query)
         {
             var item = _repository.ObterPalavras(query);
 
-            if (query.PagNumero > item.Paginacao.TotalPaginas)
-            {
+            if (item.Results.Count == 0)
                 return NotFound();
+
+            PaginationList<PalavraDto> lista = CriarLinksListPalavraDto(query, item);
+
+            return Ok(lista);
+        }
+
+        private PaginationList<PalavraDto> CriarLinksListPalavraDto(PalavraUrlQuery query, PaginationList<Palavra> item)
+        {
+            var lista = _mapper.Map<PaginationList<Palavra>, PaginationList<PalavraDto>>(item);
+
+            foreach (var palavra in lista.Results)
+            {
+                palavra.Links = new List<LinkDto>();
+                palavra.Links.Add(new LinkDto("self", Url.Link("ObterPalavra", new { id = palavra.Id }), "GET"));
             }
 
-            Response.Headers.Add("X-Pagination", JsonConvert.SerializeObject(item.Paginacao));
+            lista.Links.Add(new LinkDto("self", Url.Link("ObterTodas", query), "GET"));
 
-            return Ok(item.ToList());         
+            if (item.Paginacao != null)
+            {
+                Response.Headers.Add("X-Pagination", JsonConvert.SerializeObject(item.Paginacao));
+
+                if (query.PagNumero + 1 <= item.Paginacao.TotalPaginas)
+                {
+                    //proxima pagina
+                    var queryString = new PalavraUrlQuery()
+                    {
+                        PagNumero = query.PagNumero + 1,
+                        QtdeRegistrosPag = query.QtdeRegistrosPag,
+                        Data = query.Data
+                    };
+                    lista.Links.Add(new LinkDto("next", Url.Link("ObterTodas", queryString), "GET"));
+
+                    //ultima pagina
+                    var ultimaPag = new PalavraUrlQuery()
+                    {
+                        PagNumero = item.Paginacao.TotalPaginas,
+                        QtdeRegistrosPag = query.QtdeRegistrosPag,
+                        Data = query.Data
+                    };
+                    lista.Links.Add(new LinkDto("last", Url.Link("ObterTodas", ultimaPag), "GET"));
+                }
+                if (query.PagNumero - 1 > 0)
+                {
+                    //pagina anterior
+                    var queryString = new PalavraUrlQuery()
+                    {
+                        PagNumero = query.PagNumero - 1,
+                        QtdeRegistrosPag = query.QtdeRegistrosPag,
+                        Data = query.Data
+                    };
+                    lista.Links.Add(new LinkDto("prev", Url.Link("ObterTodas", queryString), "GET"));
+
+                    //primeira pagina
+                    var primeiraPag = new PalavraUrlQuery()
+                    {
+                        PagNumero = 0,
+                        QtdeRegistrosPag = query.QtdeRegistrosPag,
+                        Data = query.Data
+                    };
+                    lista.Links.Add(new LinkDto("first", Url.Link("ObterTodas", primeiraPag), "GET"));
+                }  
+            }
+
+            return lista;
         }
 
         //retorna a palavra com o id informado -- /api/palavras/id

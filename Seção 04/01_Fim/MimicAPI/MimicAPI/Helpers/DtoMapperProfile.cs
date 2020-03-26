@@ -19,6 +19,7 @@ namespace MimicAPI.Helpers
              */
 
             CreateMap<Palavra, PalavraDto>();
+            CreateMap<PaginationList<Palavra>, PaginationList<PalavraDto>>();
         }
     }
 }
